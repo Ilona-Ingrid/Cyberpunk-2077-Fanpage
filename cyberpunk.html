@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyberpunk</title>
+    <style>
+      @font-face {
+        font-family: Blender-Pro-Bold;
+        src: url(Fonts/Blender-Pro-Bold.ttf);
+      }
+      @font-face {
+        font-family: Cyberpunk;
+        src: url(Fonts/Cyberpunk.otf);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+    body {
+        display: block;
+        margin: 0 auto;
+        max-width: 950px;
+        background-image: url("img/night-city.png");
+      }
+
+      /*First section css*/
+      video {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+      /*End of First page css*/
+
+      /*Second section css*/
+      .intro {
+        min-height: 28vh;
+        background-color: #030303;
+      }
+
+      h1 {
+        padding-top: 5.5%;
+        color: #cf0011;
+        text-align: center;
+        font-family: Cyberpunk;
+        font-size: 28px;
+      }
+
+      p {
+        padding: 0.8% 2.5%;
+        color: #fff600;
+        text-align: center;
+        max-height: 100%;
+        font-size: 16px;
+        font-family: Blender-Pro-Bold; 
+      }
+      /*End of second section css*/
+
+      /*Third section css*/
+      h2 {
+        padding-top: 6%;
+        padding-bottom: 2%;
+        color: #030303;
+        text-align: center;
+        font-family: Cyberpunk;
+        font-size: 28px;
+      }
+
+      .characters {
+        min-height: 120vh;
+        background-color: #00bbe2;
+      }
+
+      .container {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+        grid-auto-rows: 320px;
+        margin: 0 auto;
+        max-width: 950px;
+      }
+
+      .container > div > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-height: 100%;
+      }
+
+      .description {
+        display: none;
+        position: absolute;
+      }
+
+      img {
+        border-radius: 10px;
+        padding: 5px;
+      }
+
+      .container > div:hover {
+        transform: scale(1.15);
+      }
+      .container > div:hover .description {
+        display: block;
+        text-align: center;
+      }
+
+      .container > div:hover img {
+        opacity: 0.5;  
+      }
+
+      .container > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        color: #030303;
+         }
+
+      .description {
+        width:150px;
+        word-wrap: break-word;
+        font-family: Blender-Pro-Bold;
+        -webkit-text-stroke: 0.4px #cf1417;
+        max-height: 100%;
+        
+        }
+      /*End of third page css*/
+
+      /*Fourth section css*/
+      .last {
+        background-color: #030303;
+        min-height: 8vh;
+        padding-top: 1.8%;
+        position: relative;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        background: #cf1417;
+        padding: 10px 20px;
+        color: #fff600;
+        border: 1px solid #cf1417;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+        font-family: Blender-Pro-Bold;
+        font-size: 16px;
+       
+      }
+
+      button:hover {
+        background: transparent;
+        color: #cf1417;
+        cursor: pointer;
+        font-family: Blender-Pro-Bold;
+      }
+       /*End of fourth page css*/
+       
+       /* Media query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-auto-rows: 250px;
+    }
+
+    .description {
+        width: 50%;
+        font-size: 8px;
+    }
+
+}
+    </style>
+  </head>
+  <body>
+    <!--First Section-->
+    <div class="video">
+      <video autoplay loop muted plays-inline width="950px">
+        <source src="/vid/trailer.mp4" />
+      </video>
+    </div>
+    <!--End of First Section-->
+
+    <!--Second Section-->
+    <div class="intro">
+      <h1>Welcome To Night City</h1>
+      <p>
+        Cyberpunk 2077 is a 2020 action role-playing video game created by CD Projekt, based on video game designer
+        Mike Pondsmith's tabletop game series. Set in a dystopian cyberpunk
+        universe, the player assumes the role of "V", a mercenary in the fictional 
+        Californian city known as "Night City", where they deal with the fallout 
+        from a heist gone wrong that results in an experimental cybernetic "bio-chip" 
+        containing an engram of the legendary rock star and terrorist Johnny Silverhand
+        threatening to slowly overwrite V's mind; as the story progresses V and Johnny must
+         work together to find a way to be separated and save V's life.
+      </p>
+    </div>
+    <!--End of Second Section-->
+
+    <!--Third Section-->
+    <div class="characters">
+      <h2>Some Of The Characters You’ll Meet</h2>
+    
+    <section class="container">
+      <div>
+        <img src="/img/Characters-01.png" alt="v" />
+        <span class="description">V, an alias for Valerie/Vincent, is a mercenary involved in
+         a series of events during the year 2077. V is the player-controlled character 
+         and their gender, appearance, attributes, perks,and Lifepaths are all customisable
+        and have an impact on the storyline.>
+      </div>
+      <div>
+        <img src="/img/Characters-02.png" alt="panam palmer" />
+        <span class="description">Panam Palmer is introduced as a former member of the Aldecaldos nomad clan, 
+        who, after a family dispute, decided to live a more independent life as a mercenary. She is also a
+         possible romance option for V with a masculine body in Cyberpunk 2077</span>
+      </div>
+      <div>
+        <img src="/img/Characters-03.png" alt="goro takemura" />
+        <span class="description">Goro Takemura is the former personal bodyguard of Saburo Arasaka. He is a stoic man of honor and fiercely loyal to Arasaka,
+         but finds himself betrayed and out of his element in Night City..</span>
+      </div>
+      <div>
+        <img src="/img/Characters-04.png" alt="altiera cunningham" />
+        <span class="description">Altiera Cunningham, known as Alt, a top netrunner, created the Soulkiller program, but Arasaka Corporation kidnapped her, 
+          used her to create a version, and turned her into its first victim—now existing as a digital ghost in the Net.</span>
+      </div>
+      <div>
+        <img src="/img/Characters-05.png" alt="johnny silverhand" />
+        <span class="description"> Johnny Silverhand was killed by Adam Smasher on August 20th, 2023. However, his consciousness was saved as an engram and stored on a 
+          Relic. The engram is not Silverhand's actual consciousness, but instead a digital replication of his personality.
+        </span>
+      </div>
+      <div>
+        <img src="/img/Characters-06.png" alt="maman brigitte" />
+        <span class="description">Maman Brigitte is an alarmingly skilled netrunner and leader of the Voodoo Boys – the gang that rules over Pacifica's Haitian community.
+         She takes on the riskiest jobs and is always ready to put her neck on the line for her people. </span>
+      </div>
+      <div>
+        <img src="/img/Characters-07.png" alt="jackie welles" />
+        <span class="description">Jackie Welles is a merc who value friendship, loyalty, and family above all else. He is one of V's first contacts,
+           quickly becoming V's partner and accompanying V on a handful of early jobs in the game</span>
+      </div>
+      <div>
+        <img src="/img/Characters-08.png" alt="judy alvarez " />
+        <span class="description">Judy Álvarez is a skilled braindance techie and a member of the Mox. She has her own apartment in northeastern Kabuki, Watson. 
+          Judy is a possible romance option for V in Cyberpunk 2077.</span>
+      </div>
+      <div>
+        <img src="/img/Characters-09.png" alt="dexter deShawn" />
+        <span class="description">Dexter DeShawn, is a well-known fixer in Night City. In 2077, he returned to the city after spending a few years 'off the grid'. 
+        Despite not being a Mercenary himself before he became a fixer, he was able to succeed because of his charisma and good eye for potential in other people.</span>
+      </div>    
+      <div>
+        <img src="/img/Characters-10.png" alt="hanako arasaka" />
+        <span class="description">Hanako Arasaka is a skilled, self-taught Netrunner and the head of the Kiji Faction of the Arasaka Corporation. Through her strong and calm demeanor she is able to command and lead with great pride for her work.
+          She was the only one who understood Alt's work with the Soulkiller.</span>
+      </div>    
+      <div>
+        <img src="/img/Characters-11.png" alt="adam smasher" />
+        <span class="description">Adam Smasher is a full borg. He is employed by Arasaka and the position of head of security and the personal bodyguard of Yorinobu Arasaka. Adam can only be described in one way, pure uncontrolled evil.</span>
+      </div>    
+      <div>
+        <img src="/img/Characters-12.png" alt="rogue amendiares " />
+        <span class="description">Rogue Amendiares is a well-known solo during the 2010s in Night City, who became owner of the famous Afterlife nightclub in the Time of the Red, and was widely considered the city's best fixer by 2077</span>
+      </div>    
+      </div>
+    </section>
+    <!--End of Third Section-->
+
+      <!--Fourth Section-->
+    <div class="last">
+      <button>Buy Now</button>
+    </div>
+    <!--End of Fourth Section-->
+
+    <!--Javascript Section-->
+    <script>
+      function buy () {
+      let age = prompt("How old are you?");
+      let button = document.querySelector("button");
+      if (age >= 17) {
+         window.open("https://www.cyberpunk.net/gb/en/buy", "_blank");
+      } else {
+        if (age < 17) { 
+        alert("Sorry, you're not old enough to buy Cyberpunk.");
+      }
+    }
+  }
+    let buyButton = document.querySelector("button");
+    buyButton.addEventListener("click", buy);
+
+   </script>
+    <!--End of Javascript Section-->
+  </body>
+</html>
+          
+
+        
